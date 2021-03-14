@@ -15,7 +15,7 @@ app.use("/todos", todoRoutes);
 app.get("/", (req, res) => res.send("This is a server apparently"));
 // app.get("*", (req, res) => res.redirect("/"));
 app.get("*", (req, res) => {
-    res.sendFile("/build/index.html", { root: __dirname + "/" });
-  });
+  res.sendFile("/build/index.html", { root: __dirname + "/" });
+});
 
 app.listen(port, () => console.log(`This app is listening on port ${port}!`));
